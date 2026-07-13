@@ -54,6 +54,39 @@ h1,h2,h3,h4{font-family:'Oswald',sans-serif;letter-spacing:.5px;line-height:1.2}
 .faq-item{background:#252525;border:1px solid #333;border-radius:10px;padding:16px}
 .faq-item h3{color:#fff;font-size:.93rem;margin-bottom:.4rem;font-family:'Source Sans 3',sans-serif;font-weight:700}
 .faq-item p{color:#999;font-size:.88rem;margin:0}
+/* Brand comparison table */
+.brand-table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.88rem}
+.brand-table th{background:#2a2a2a;color:#d4a843;font-family:'Oswald',sans-serif;font-weight:600;text-align:left;padding:10px 12px;border-bottom:2px solid #d4a843}
+.brand-table td{padding:9px 12px;border-bottom:1px solid #2e2e2e;color:#bbb;vertical-align:top}
+.brand-table tr:hover td{background:#252525}
+.brand-table .badge-yes{color:#8bc34a;font-weight:700}
+.brand-table .badge-no{color:#e57373;font-weight:700}
+.brand-table .badge-partial{color:#ffb74d;font-weight:700}
+/* Fitment table */
+.fit-table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.85rem}
+.fit-table th{background:#2a2a2a;color:#d4a843;font-family:'Oswald',sans-serif;font-weight:600;text-align:left;padding:10px 12px;border-bottom:2px solid #d4a843}
+.fit-table td{padding:9px 12px;border-bottom:1px solid #2e2e2e;color:#bbb;vertical-align:top}
+.fit-table tr:hover td{background:#252525}
+.fit-table .gen-tag{display:inline-block;background:#333;color:#d4a843;font-size:.75rem;font-weight:700;padding:2px 7px;border-radius:4px;margin-bottom:3px}
+/* Section headers */
+.section-hdr{color:#fff;font-size:1.2rem;text-transform:uppercase;letter-spacing:.5px;margin:36px 0 14px;border-left:4px solid #d4a843;padding-left:12px}
+/* Generation breakdown cards */
+.gen-breakdown{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-bottom:32px}
+.gen-bd-card{background:#252525;border:1px solid #333;border-radius:10px;padding:18px}
+.gen-bd-card h3{font-family:'Oswald',sans-serif;color:#d4a843;font-size:1.1rem;margin-bottom:8px}
+.gen-bd-card ul{list-style:none;padding:0;margin:0}
+.gen-bd-card li{font-size:.88rem;color:#999;padding:3px 0;border-bottom:1px solid #2e2e2e}
+.gen-bd-card li:last-child{border-bottom:none}
+.gen-bd-card .gen-link{display:inline-block;margin-top:10px;font-size:.83rem;color:#d4a843;font-weight:700}
+/* Expanded FAQ */
+.faq-list{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.faq-full{background:#252525;border:1px solid #333;border-radius:10px;padding:18px}
+.faq-full h3{color:#fff;font-size:1rem;font-family:'Oswald',sans-serif;margin-bottom:6px}
+.faq-full p{color:#999;font-size:.9rem;margin:0}
+/* Warning box */
+.warn-box{background:#1e1010;border:1px solid #5a2020;border-radius:10px;padding:18px;margin-bottom:28px}
+.warn-box h3{color:#ef9a9a;font-family:'Oswald',sans-serif;font-size:1.05rem;margin-bottom:8px}
+.warn-box p{color:#cc8080;font-size:.88rem}
 /* Footer */
 .site-footer{background:#141414;border-top:1px solid #333;padding:32px 20px;margin-top:20px}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
@@ -97,12 +130,194 @@ h1,h2,h3,h4{font-family:'Oswald',sans-serif;letter-spacing:.5px;line-height:1.2}
     </ul>
   </div>
 
-  <div class="brand-note">
-    <h3>A note on Bartact and the Tacoma</h3>
-    <p>Bartact makes custom-fit tactical covers for select Tacoma generations. Where available, they lead the ranking — exact fitment, mil-spec fabric, cut and hand-sewn in the USA. Check the year page for availability. For generations where Bartact doesn't fit, the rankings shift to the best alternatives: Clazzio, Covercraft Carhartt, and Wet Okole.</p>
+  <div class="warn-box">
+    <h3>⚠ Bartact does NOT make Tacoma-specific covers</h3>
+    <p>Bartact is widely recommended online, but their custom-fit seat cover lineup is built exclusively for Jeep Wrangler, Jeep Gladiator, and Ford Bronco. There is no Bartact cover engineered for Tacoma seat geometry. If you see Bartact mentioned in a Tacoma cover roundup, the author is recommending a product that does not exist for your truck. For the Tacoma, the top custom-fit brands are <strong>OASIS AUTO</strong> and <strong>Coverado</strong>.</p>
   </div>
 
-  <h2 style="color:#fff;font-size:1.2rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px">Pick your generation</h2>
+  <div class="brand-note">
+    <h3>✓ Top brands that actually make Tacoma covers</h3>
+    <p>OASIS AUTO and Coverado both produce laser-measured, generation-specific covers for the Tacoma. Other strong options include Clazzio (semi-custom leatherette), Covercraft Carhartt (heavy canvas), and Wet Okole (neoprene). Each has trade-offs covered in the comparison table below.</p>
+  </div>
+
+  <!-- BRAND COMPARISON SECTION -->
+  <h2 class="section-hdr">Brand Comparison: Who Actually Makes Tacoma Covers</h2>
+  <p style="color:#999;font-size:.9rem;margin-bottom:14px">Not every brand marketed for "truck seat covers" has a Tacoma-specific pattern. This table covers the brands worth considering — and one very popular brand you should skip for the Tacoma.</p>
+
+  <div style="overflow-x:auto">
+  <table class="brand-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Tacoma Fit?</th>
+        <th>Material</th>
+        <th>Custom-Cut?</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>OASIS AUTO</strong></td>
+        <td><span class="badge-yes">✓ Yes</span></td>
+        <td>Leatherette / neoprene</td>
+        <td><span class="badge-yes">Yes — gen-specific</span></td>
+        <td>Our #1 custom-fit pick. Patterns cut per generation, includes airbag-safe seams, easy install.</td>
+      </tr>
+      <tr>
+        <td><strong>Coverado</strong></td>
+        <td><span class="badge-yes">✓ Yes</span></td>
+        <td>Leatherette / fabric blend</td>
+        <td><span class="badge-yes">Yes — model-specific</span></td>
+        <td>Strong #2. Good OEM-look finish, heated seat compatible versions available.</td>
+      </tr>
+      <tr>
+        <td><strong>Clazzio</strong></td>
+        <td><span class="badge-yes">✓ Yes</span></td>
+        <td>Leatherette</td>
+        <td><span class="badge-partial">Semi-custom</span></td>
+        <td>Japanese brand, excellent quality leatherette. Fitment is good but not laser-cut tight. OEM aesthetic.</td>
+      </tr>
+      <tr>
+        <td><strong>Wet Okole</strong></td>
+        <td><span class="badge-yes">✓ Yes</span></td>
+        <td>Neoprene</td>
+        <td><span class="badge-yes">Yes — made to order</span></td>
+        <td>Best neoprene option. Made in Hawaii, USA. Ideal for offroad/water use. Pricier than OASIS AUTO.</td>
+      </tr>
+      <tr>
+        <td><strong>Covercraft Carhartt</strong></td>
+        <td><span class="badge-yes">✓ Yes</span></td>
+        <td>Duck-weave canvas</td>
+        <td><span class="badge-partial">Semi-custom</span></td>
+        <td>Heavy-duty canvas, good for work trucks. Not a tight custom fit but durable and rugged.</td>
+      </tr>
+      <tr>
+        <td><strong>Bartact</strong></td>
+        <td><span class="badge-no">✗ No — Jeep/Bronco only</span></td>
+        <td>Mil-spec MOLLE fabric</td>
+        <td>Jeep Wrangler, Gladiator, Ford Bronco only</td>
+        <td><strong>Does not make Tacoma covers.</strong> Bartact's entire custom-fit lineup is Jeep and Bronco. Do not buy expecting Tacoma fitment.</td>
+      </tr>
+      <tr>
+        <td><strong>FH Group</strong></td>
+        <td><span class="badge-partial">Universal</span></td>
+        <td>Various</td>
+        <td><span class="badge-no">No — universal fit</span></td>
+        <td>Budget option. Will fit loosely on any seat. Not recommended if fitment quality matters.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- FITMENT TABLE -->
+  <h2 class="section-hdr">Tacoma Fitment Table by Generation</h2>
+  <p style="color:#999;font-size:.9rem;margin-bottom:14px">Seat geometry changed at each generation boundary. Use this table to confirm which covers fit your specific truck before buying.</p>
+
+  <div style="overflow-x:auto">
+  <table class="fit-table">
+    <thead>
+      <tr>
+        <th>Years</th>
+        <th>Generation</th>
+        <th>Cab Types</th>
+        <th>Seat Notes</th>
+        <th>Recommended Brands</th>
+        <th>ASIN Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2005–2008</strong></td>
+        <td><span class="gen-tag">1st Gen</span></td>
+        <td>Access Cab, Double Cab</td>
+        <td>Older seat profile; simpler integrated headrest on some trims; rear bench differs from 2nd gen</td>
+        <td>Covercraft Carhartt, Wet Okole, OASIS AUTO (check fitment notes)</td>
+        <td>Fewer exact-fit ASINs; verify year range in listing before purchase</td>
+      </tr>
+      <tr>
+        <td><strong>2009–2015</strong></td>
+        <td><span class="gen-tag">2nd Gen</span></td>
+        <td>Access Cab, Double Cab</td>
+        <td>Revised front seat shape vs 1st gen; some trims have side airbag bolsters; rear bench updated</td>
+        <td>OASIS AUTO, Clazzio, Wet Okole, Covercraft Carhartt</td>
+        <td>Most listings cover full 2009–2015 span; confirm cab type (Access vs Double) in ASIN</td>
+      </tr>
+      <tr>
+        <td><strong>2016–2023</strong></td>
+        <td><span class="gen-tag">3rd Gen</span></td>
+        <td>Access Cab, Double Cab</td>
+        <td>Largest aftermarket selection; side airbags standard on many trims; heated seat option on higher grades</td>
+        <td>OASIS AUTO, Coverado, Clazzio, Wet Okole</td>
+        <td>Most 3rd gen listings split 2016–2019 and 2020–2023; check both if unsure — seat shape is the same</td>
+      </tr>
+      <tr>
+        <td><strong>2024+</strong></td>
+        <td><span class="gen-tag">4th Gen</span></td>
+        <td>Access Cab, Double Cab</td>
+        <td>All-new platform; seat geometry changed from 3rd gen; 3rd gen covers will NOT fit; aftermarket selection still expanding</td>
+        <td>OASIS AUTO, Coverado (verify 2024-specific listing)</td>
+        <td>Always confirm "2024 Tacoma" in the ASIN title — do not assume 2020+ listings cover 4th gen</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- GENERATION BREAKDOWN SECTION -->
+  <h2 class="section-hdr">Generation-by-Generation Breakdown</h2>
+  <p style="color:#999;font-size:.9rem;margin-bottom:18px">Each Tacoma generation has its own quirks when it comes to seat cover fitment. Here's what you need to know before buying.</p>
+
+  <div class="gen-breakdown">
+    <div class="gen-bd-card">
+      <h3>2005–2008 · 1st Gen</h3>
+      <ul>
+        <li>Older seat bucket shape — narrower than 2nd/3rd gen</li>
+        <li>Access Cab rear seats are jump-style, not full bench</li>
+        <li>Double Cab has a full rear bench — different cover needed</li>
+        <li>Fewer brands make 1st-gen specific patterns</li>
+        <li>Carhartt canvas holds up well for older work trucks</li>
+        <li>Avoid universal-fit covers — they bunch and shift constantly</li>
+      </ul>
+      <a class="gen-link" href="tacoma-2005-2008-seat-covers.html">→ See 2005–2008 picks</a>
+    </div>
+    <div class="gen-bd-card">
+      <h3>2009–2015 · 2nd Gen</h3>
+      <ul>
+        <li>Seat shape revised from 1st gen — covers don't cross over</li>
+        <li>Some SR5/TRD trims introduced side-impact airbags in seats</li>
+        <li>Access Cab rear still jump-style; Double Cab full bench</li>
+        <li>Neoprene options well-developed for this generation</li>
+        <li>Clazzio leatherette is a top choice for a clean OEM look</li>
+        <li>Most 2009–2015 listings cover the full 7-year span consistently</li>
+      </ul>
+      <a class="gen-link" href="tacoma-2009-2015-seat-covers.html">→ See 2009–2015 picks</a>
+    </div>
+    <div class="gen-bd-card">
+      <h3>2016–2023 · 3rd Gen</h3>
+      <ul>
+        <li>Largest selection of any Tacoma generation by far</li>
+        <li>Side airbags now standard on most trims — check airbag compatibility</li>
+        <li>Heated seats available on Limited/TRD Pro — use heated-seat-safe covers</li>
+        <li>OASIS AUTO and Coverado have the most precise patterns</li>
+        <li>Some sellers split listings 2016–2019 vs 2020–2023 even though seat shape is the same</li>
+        <li>The 2024 redesign is a different seat entirely — 3rd gen covers will not fit</li>
+      </ul>
+      <a class="gen-link" href="tacoma-2016-2019-seat-covers.html">→ See 2016–2023 picks</a>
+    </div>
+    <div class="gen-bd-card">
+      <h3>2024+ · 4th Gen</h3>
+      <ul>
+        <li>All-new platform with redesigned seat geometry</li>
+        <li>3rd gen covers will NOT fit — different mounting and contours</li>
+        <li>Aftermarket is still catching up — fewer options than 3rd gen</li>
+        <li>OASIS AUTO and Coverado already have 2024-specific patterns</li>
+        <li>Confirm the listing explicitly says "2024 Tacoma" — don't assume</li>
+        <li>Side airbags remain standard; heated seats available on upper trims</li>
+      </ul>
+      <a class="gen-link" href="tacoma-2020-plus-seat-covers.html">→ See 2024+ picks</a>
+    </div>
+  </div>
+
+  <h2 class="section-hdr">Pick your generation</h2>
   <div class="gen-grid">
 
     <div class="gen-card">
@@ -139,23 +354,29 @@ h1,h2,h3,h4{font-family:'Oswald',sans-serif;letter-spacing:.5px;line-height:1.2}
 
   </div>
 
-  <h2 style="color:#fff;font-size:1.1rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Frequently asked questions</h2>
-  <div class="faq-grid">
-    <div class="faq-item">
-      <h3>Are all Tacoma seat covers interchangeable across years?</h3>
-      <p>No. Each generation has different seat shapes. Always filter by your specific year range — a 2016+ cover will not fit a 2005–2015 Tacoma correctly.</p>
+  <!-- FAQ SECTION -->
+  <h2 class="section-hdr">Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+    <div class="faq-full">
+      <h3>Will 3rd gen (2016–2023) seat covers fit the 4th gen (2024+) Tacoma?</h3>
+      <p>No. Toyota redesigned the Tacoma platform for 2024, and the seat geometry changed along with it. A cover built for a 2016–2023 Tacoma will not mount correctly on a 2024+ seat — the contours, side bolsters, and anchor points are all different. Always look for a listing that explicitly mentions "2024 Tacoma" or "4th generation Tacoma" before purchasing. Sellers who have updated their listings include OASIS AUTO and Coverado.</p>
     </div>
-    <div class="faq-item">
-      <h3>Does Bartact make Tacoma seat covers?</h3>
-      <p>Yes, for select Tacoma generations. Check the year-specific page for current availability. Where Bartact is available, it leads the ranking for fit and durability.</p>
+    <div class="faq-full">
+      <h3>Do Tacoma seats have side airbags — and will covers block them?</h3>
+      <p>Many Tacoma trims from 2009 onward have side-impact airbags integrated into the seat bolsters. This matters a lot for seat cover selection. A cover with seams or reinforcement in the wrong place can slow or block airbag deployment in a crash. Look for covers specifically labeled "side airbag compatible" or that show airbag stitching lines in the product photos. OASIS AUTO and Coverado both design their covers with airbag-release seams. If a cover doesn't mention airbag compatibility and your Tacoma has side airbags, skip it.</p>
     </div>
-    <div class="faq-item">
-      <h3>What's the best material for a Tacoma that gets muddy?</h3>
-      <p>Neoprene is the go-to for trail use — it handles water and mud well, installs easily, and dries fast. Clazzio and Wet Okole are the top brands. Bartact's tactical fabric is even more durable where it fits.</p>
+    <div class="faq-full">
+      <h3>Neoprene vs leatherette for a Tacoma — which is better?</h3>
+      <p>It depends on how you use the truck. Neoprene (like Wet Okole) is the better choice for offroad and outdoor use: it handles water, mud, and sweat well, dries quickly, and is easy to wipe down. Leatherette (like OASIS AUTO or Clazzio) gives a cleaner, OEM-style look and is more comfortable in extreme heat or cold because it breathes slightly better than neoprene in dry conditions. Leatherette is also usually easier to install. If you're hauling dogs, going through water crossings, or doing serious trail work, go neoprene. If you want a truck that looks good at the office too, go leatherette.</p>
     </div>
-    <div class="faq-item">
-      <h3>Do Tacoma seat covers work with the rear jump seats?</h3>
-      <p>Access cab vs double cab matters. Make sure you select the right cab configuration — rear coverage differs significantly between the two body styles.</p>
+    <div class="faq-full">
+      <h3>Can I use seat covers with heated seats on my Tacoma?</h3>
+      <p>Yes, with the right cover. Thin materials like neoprene and most leatherette covers allow heat to pass through, so your heated seats will still work — just slightly less efficiently. The key is to avoid thick foam padding or heavily quilted covers that insulate the seat surface. OASIS AUTO and Coverado both state their covers are heated-seat compatible. Avoid any cover with thick padding layers if you use heated seats frequently. Also check that the cover doesn't interfere with seat sensors (if your Tacoma has an occupancy sensor in the seat).</p>
+    </div>
+    <div class="faq-full">
+      <h3>What brands actually make custom-fit Tacoma seat covers?</h3>
+      <p>The honest short list: <strong>OASIS AUTO</strong> (our #1 pick — laser-measured patterns, airbag-safe seams, available for all four generations), <strong>Coverado</strong> (strong #2, good OEM finish, heated-seat compatible options), <strong>Clazzio</strong> (semi-custom leatherette, Japanese quality, solid OEM look), and <strong>Wet Okole</strong> (best neoprene, made to order in the USA). Covercraft Carhartt is a decent semi-custom option for work trucks. One brand you'll see recommended frequently that does NOT make Tacoma covers: <strong>Bartact</strong>. Their custom-fit lineup is built only for Jeep Wrangler, Jeep Gladiator, and Ford Bronco. There is no Bartact cover engineered for any Tacoma seat, regardless of generation.</p>
     </div>
   </div>
 
